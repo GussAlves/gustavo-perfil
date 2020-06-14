@@ -1,0 +1,47 @@
+/* Reset do css */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('../img/fundo.jpg');
+    background-size: auto 150vh;
+    font-family: Arial;
+    height: 100vh;
+}
+
+.menu {
+    background-color: white;
+}
+
+.menu ul {
+    /* justify-content só ira funcionar com o display: flex; */
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu li {
+    list-style: none;
+}
+
+a {
+    color: teal;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.site-title,
+.site-subtitle {
+    color: whitesmoke;
+    text-align: center;
+}
+
+.site-subtitle {
+    font-style: italic;
+}
