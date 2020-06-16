@@ -4,6 +4,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Oswald', sans-serif;
 }
 
 body {
@@ -13,8 +14,59 @@ body {
     height: 100vh;
 }
 
+header {
+    align-items: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Se a largura minima for 400px */
+
+
+/* Breakpoint */
+
+@media (min-width: 400px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+
+/* Breakpoint */
+
+@media (min-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+    header {
+        height: 80vh;
+    }
+}
+
+
+/* Breakpoint */
+
+@media (min-width: 1200px) {
+    body {
+        font-size: 22px;
+    }
+    header {
+        height: 80vh;
+    }
+}
+
 .menu {
     background-color: white;
+    position: fixed;
+    width: 100vw;
+    top: 0px;
+}
+
+.menu a {
+    display: block;
+    padding: 10px 20px;
 }
 
 .menu ul {
@@ -42,6 +94,58 @@ a:hover {
     text-align: center;
 }
 
+.site-title {
+    font-size: 4em;
+}
+
 .site-subtitle {
     font-style: italic;
+}
+
+.portifolio {
+    padding: 2em;
+    height: 100vh;
+}
+
+.portifolio h2 {
+    color: whitesmoke;
+    font-size: 3em;
+    margin-bottom: 1.5em;
+}
+
+.portifolio .grid {
+    display: grid;
+    gap: 2em;
+}
+
+@media (min-width: 560px) {
+    .portifolio .grid {
+        grid-template-columns: repeat(2, 240px);
+        justify-content: center;
+    }
+}
+
+@media (min-width: 880px) {
+    .portifolio .grid {
+        grid-template-columns: repeat(3, 240px);
+        align-content: center;
+        justify-content: center;
+        height: calc(100vh - 8em -48px);
+    }
+}
+
+.portifolio figure {
+    text-align: center;
+}
+
+.img-portfolio {
+    height: 240px;
+    width: 240px;
+    object-fit: cover;
+    object-position: left bottom;
+    border-radius: 50%;
+}
+
+.img-portfolio:hover {
+    border: solid 8px tomato;
 }
